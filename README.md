@@ -1,2 +1,6 @@
-# offensivesecurity
-- red team stuff goes in here
+# offensive-security
+
+todo:
+
+- guide on terraforming
+- guide on c2 setup
