@@ -1,0 +1,18 @@
+Setting the offensive security lab.
+
+. Caldera on Ubuntu 17.10 (Artful Aardvark)
+$ git clone https://github.com/mitre/caldera.git caldera
+$ apt-get install python3-dev python3-pip
+$ pip3 install --upgrade setuptools
+$ pip3 install -r requirements.txt (pip might barf with a missing dep on a specific version)
+
+* install mongodb following the instructions located here: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
+$ vim /etc/mongodb.conf 
+* add the following lines into the configuration, keep note of the tab spacing
+replication:
+   replSetName: caldera
+
+$ service mongod start
+$ service mongod status
+$ python3 caldera.py 
